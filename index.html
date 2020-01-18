@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+
+<style>
+
+@keyframes animation-rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+    }
+
+@keyframes animation-pulse {
+            0% {
+                transform:scale(0,0);
+            }
+            50% {
+                transform: scale(0.8,0.8);
+                opacity: 100%;
+            }
+            100% {
+                transform: scale(1,1);
+                opacity: 0%;
+            }
+    }
+
+    body {
+        display: flex;
+        background-color: #050210;
+    }
+
+    #everything {
+        margin: 200px auto;
+        display: flex;
+    }
+
+#spin {
+        width: 350px;
+        height: 350px;
+        background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+        border-radius: 100%;
+        animation-name: animation-rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        filter: brightness(125%);
+}
+
+#background {
+        width: 300px;
+        height: 300px;
+        background-color: #050210;
+        margin: auto;
+        border-radius: 100%;
+        position: absolute;
+        align-self: center;
+        margin-right:25px;
+        margin-left: 25px;
+    }
+
+#pulse1 {
+        width: 300px;
+        height: 300px;
+        background-color: #0c042e;
+        border-radius: 100%;
+        animation-name: animation-pulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: absolute;
+        align-self: center;
+        margin-right:25px;
+        margin-left: 25px;
+        }
+
+#pulse2 {
+        width: 300px;
+        height: 300px;
+        background-color: #0c042e;
+        border-radius: 100%;
+        animation-name: animation-pulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 1s;
+        position: absolute;
+        align-self: center;
+        margin-right:25px;
+        margin-left: 25px;
+    }
+
+    #glow {
+        width: 450px;
+        height: 450px;
+        background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+        border-radius: 100%;
+        animation-name: animation-rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        filter: brightness(125%);
+        position: absolute;
+        align-self: center;
+        margin-right: -50px;
+        margin-left: -50px;
+        filter: brightness(150%) blur(10px);
+        opacity: 25%;
+    }
+
+
+</style>
+
+</head>
+<body>
+    
+<div id="everything">
+    <div id="glow"></div>
+    <div id="spin"></div>
+    <div id="background"></div>
+    <div id="pulse1"></div>
+    <div id="pulse2"></div>
+</div>
+
+
+
+
+</body>
+</html>
